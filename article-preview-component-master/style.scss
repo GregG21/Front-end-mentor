@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    
+    
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    width: 90%;
+    background-color: white;
+    margin: 6em auto;
+    border-radius: 10px;
+}
+
+.article-head {
+    
+    background-image: url(/images/drawers.jpg);
+    min-height: 200px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.5;
+    color: hsl(217, 19%, 35%);
+    padding: 1em 0;
+
+}
+.text {
+
+    font-size: .8em;
+    line-height: 1.8;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+    padding-bottom: 3em;
+
+
+}
+.article-body{ 
+    padding: 2em;
+    margin: 0 auto;
+
+}
+.user-section {
+    font-size: .8rem;
+    line-height: 1.5;
+    font-family: 'Manrope', sans-serif;
+    align-items: center;
+    flex-direction: row;
+    img{
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+
+    }
+    .name_date {
+        padding-left: 1em;
+    }
+    .name {
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
+    }
+    .date {
+        font-weight: 500;
+        color: hsl(212, 23%, 69%);
+    }
+}
+
+.share-button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 2.3em;
+    height: 2.3em;
+    margin-left: auto;
+    background-color: hsl(210, 46%, 95%);
+    z-index: 1;
+    cursor: pointer;
+    img {
+        width: 1.3em;
+        height: auto;
+        
+    }
+
+    &:hover {
+        background-color:hsl(214, 17%, 51%);  
+        path {
+        fill: white;
+
+        }   
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    .flex {
+        flex-direction: row;
+    }
+    .article-head {
+        min-height: 40%;
+        min-width: 40%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .text {
+        font-size: 1.1rem;
+    }
+
+}
