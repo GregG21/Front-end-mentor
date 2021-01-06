@@ -1,12 +1,190 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  background: url("images/pattern-hills.svg") no-repeat bottom center, url("images/bg-stars.svg") no-repeat center center, -webkit-gradient(linear, left top, left bottom, from(#1e1e2a), color-stop(25%, #201e2b), color-stop(50%, #211d2b), color-stop(75%, #231d2b)), -moz-linear-gradient(180deg, #1e1e2a 0%, #201e2b 25%, #211d2b 50%, #231d2b 75%), -webkit-linear-gradient(180deg, #1e1e2a 0%, #201e2b 25%, #211d2b 50%, #231d2b 75%), #1e1e2a;
+  background: url("images/pattern-hills.svg") no-repeat bottom center, url("images/bg-stars.svg") no-repeat center center, linear-gradient(180deg, #1e1e2a 0%, #201e2b 25%, #211d2b 50%, #231d2b 75%), -moz-linear-gradient(180deg, #1e1e2a 0%, #201e2b 25%, #211d2b 50%, #231d2b 75%), -webkit-linear-gradient(180deg, #1e1e2a 0%, #201e2b 25%, #211d2b 50%, #231d2b 75%), #1e1e2a;
+  background-size: contain, cover;
+}
+
+.wrapper {
   height: 100vh;
-  background-image: url("images/bg-stars.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.social img + img {
+  padding-left: 2em;
+}
+
+.signature {
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.signature a {
+  color: #fb6087;
+}
+
+.tick {
+  font-size: clamp(4.9rem, calc(1vw + 1rem), 2.2rem);
+  white-space: nowrap;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .tick {
+    font-size: 9vw;
+  }
+}
+
+.tick [data-view] {
+  min-width: 100%;
+}
+
+.tick-label {
+  margin-top: 2em;
+}
+
+.tick-char {
+  width: 1.5rem;
+}
+
+.tick-group {
+  margin: 0 .2em;
+  text-align: center;
+}
+
+.tick-label {
+  color: #8486a9 !important;
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: .4em;
+}
+
+.tick-flip-panel {
+  color: #fb6087 !important;
+}
+
+.tick-flip {
+  font-family: "Red Hat Text", sans-serif !important;
+}
+
+.tick-flip-panel-text-wrapper {
+  line-height: 1.45 !important;
+}
+
+.tick-flip-panel {
+  border-radius: 10px;
+  background-color: #343650 !important;
+}
+
+.tick-flip {
+  border-radius: 0.12em !important;
 }
 /*# sourceMappingURL=main.css.map */
