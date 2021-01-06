@@ -110,15 +110,18 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-align: center;
 }
 
 .content {
   text-align: center;
 }
 
-.social img + img {
-  padding-left: 2em;
+.social svg + svg {
+  margin-left: 2em;
+}
+
+.social svg:hover path {
+  fill: #fb6087;
 }
 
 .signature {
@@ -132,15 +135,9 @@ body {
 }
 
 .tick {
-  font-size: clamp(4.9rem, calc(1vw + 1rem), 2.2rem);
+  font-size: 4rem;
   white-space: nowrap;
   font-family: "Red Hat Text", sans-serif;
-}
-
-@media only screen and (max-width: 600px) {
-  .tick {
-    font-size: 9vw;
-  }
 }
 
 .tick [data-view] {
@@ -186,5 +183,11 @@ body {
 
 .tick-flip {
   border-radius: 0.12em !important;
+}
+
+@media (max-width: 600px) {
+  .tick {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
